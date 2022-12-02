@@ -18,7 +18,6 @@ public class UsuarioModel {
 
     @EqualsAndHashCode.Exclude
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String id;
 
     @Column(length = 100, nullable = false)
