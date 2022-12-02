@@ -1,5 +1,6 @@
 package com.api.praticandoexception.services.impl;
 
+import com.api.praticandoexception.enums.StatusDoUsuario;
 import com.api.praticandoexception.models.UsuarioModel;
 import com.api.praticandoexception.repositories.UsuarioRepository;
 import com.api.praticandoexception.services.UsuarioService;
@@ -16,8 +17,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public UsuarioModel salvar(UsuarioModel usuario) {
-
         usuario.setId(UUID.randomUUID().toString());
+        usuario.setStatus(StatusDoUsuario.ATIVO);
         usuario = emailMinusculo(usuario);
         return repository.save(usuario);
     }

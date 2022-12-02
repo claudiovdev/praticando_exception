@@ -1,5 +1,6 @@
 package com.api.praticandoexception.models;
 
+import com.api.praticandoexception.enums.StatusDoUsuario;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -28,6 +29,9 @@ public class UsuarioModel {
 
     @Column(length = 20)
     private String numeroTelefone;
+
+    @Enumerated(EnumType.STRING)
+    private StatusDoUsuario status;
 
     @CreationTimestamp
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'")
