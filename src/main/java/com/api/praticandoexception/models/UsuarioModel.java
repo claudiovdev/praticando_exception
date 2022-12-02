@@ -30,6 +30,9 @@ public class UsuarioModel {
     @Column(length = 20)
     private String numeroTelefone;
 
+    @Embedded
+    Endereco endereco;
+
     @Enumerated(EnumType.STRING)
     private StatusDoUsuario status;
 
