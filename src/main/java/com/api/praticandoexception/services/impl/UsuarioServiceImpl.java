@@ -7,7 +7,6 @@ import com.api.praticandoexception.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -22,11 +21,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuario.setStatus(StatusDoUsuario.ATIVO);
         usuario = emailMinusculo(usuario);
         return repository.save(usuario);
-    }
-
-    @Override
-    public List<UsuarioModel> listarUsuarios() {
-        return repository.findAll();
     }
 
     public UsuarioModel emailMinusculo(UsuarioModel usuario){
