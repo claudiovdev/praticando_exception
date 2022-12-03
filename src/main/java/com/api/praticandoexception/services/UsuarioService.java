@@ -11,4 +11,6 @@ public interface UsuarioService {
     List<UsuarioModel> listarUsuarios();
 
     Endereco buscarEndereco(String cep);
+
+    UsuarioModel buscarUsuario(String id);
 }
